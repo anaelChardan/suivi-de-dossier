@@ -1,0 +1,15 @@
+{
+  "app": {
+    "name": "suividedossier",
+    "port": 80
+  },
+  "logger": {
+    "console": true,
+    "stdout": false
+  },
+  "cors": {
+    "swaggerUi": {
+      "allowOrigin": "*"
+    }
+  }
+}

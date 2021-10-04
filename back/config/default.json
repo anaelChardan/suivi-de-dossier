@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "suividedossier",
+    "port": 8050
+  },
+  "logger": {
+    "console": true,
+    "stdout": false
+  },
+  "postgres": "postgres://suividedossier:suividedossier@localhost:5435/suividedossier?sslmode=disable",
+  "cors": {
+    "swaggerUi": {
+      "allowOrigin": "*"
+    }
+  }
+}

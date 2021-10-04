@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13.2
+    container_name: suivi-de-dossier-postgres
+    restart: always
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U suividedossier -d suividedossier']
+      interval: 1s
+      timeout: 30s
+      retries: 50
+    ports:
+      - '5435:5432'
+    environment:
+      - POSTGRES_DB=suividedossier
+      - POSTGRES_USER=suividedossier
+      - POSTGRES_PASSWORD=suividedossier
+      - POSTGRES_HOSTNAME=postgres
+      - TZ=Etc/GMT
+      - PGTZ=Etc/GMT
+    # volumes:
+      # - ./scripts/postgres-config.sql:/docker-entrypoint-initdb.d/postgres-config.sql

@@ -1,0 +1,37 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "test",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "jest --verbose"
+    },
+    {
+      "type": "npm",
+      "script": "pretest",
+      "problemMatcher": [],
+      "label": "pretest",
+      "detail": "NODE_ENV=test ts-node src/infrastructure/database/scripts/setup.ts"
+    },
+    {
+      "type": "npm",
+      "script": "posttest",
+      "problemMatcher": [],
+      "label": "posttest",
+      "detail": "NODE_ENV=test ts-node src/infrastructure/database/scripts/teardown.ts"
+    },
+    {
+      "type": "npm",
+      "script": "test:domain",
+      "problemMatcher": [],
+      "label": "npm: test:domain",
+      "detail": "TZ=Etc/GMT jest --verbose ./src/domain"
+    }
+  ]
+}
