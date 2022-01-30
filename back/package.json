@@ -21,8 +21,7 @@
     "migrate:rollback:all": "knex migrate:rollback --all",
     "migrate:up": "knex migrate:up",
     "migrate:down": "knex  migrate:down",
-    "start:docker": "docker-compose -f docker-compose.yaml up --build --force-recreate --abort-on-container-exit",
-    "csv2json": "ts-node scripts/csv2json.ts"
+    "start:docker": "docker-compose -f docker-compose.yaml up --build --force-recreate --abort-on-container-exit"
   },
   "dependencies": {
     "@types/koa-cors": "^0.0.0",

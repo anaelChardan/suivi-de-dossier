@@ -1,5 +1,4 @@
 import { Knex } from 'knex';
-import { query } from 'winston';
 import { createConnectionPool } from '../../infrastructure/database/createConnectionPool';
 
 export async function db<T extends {} = any, R = void>(
